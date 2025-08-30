@@ -1,6 +1,12 @@
-import Image from "next/image";
-import Header from "./(component)/Header";
+import Footer from "@/component/organism/Footer";
+import Header from "../component/organism/Header";
 
 export default function Home() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <main className="h-[calc(100vh-192px)]"></main>
+      <Footer />
+    </>
+  );
 }
