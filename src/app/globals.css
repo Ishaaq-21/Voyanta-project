@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@layer base, clerk, components, utilities;
 
 :root {
   --background: #ffffff;
@@ -20,10 +21,27 @@
   --container-2xl: 1536px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer {
+  /* Clerk components tweaks to fit my design */
+  .cl-formButtonPrimary {
+    @apply relative mx-auto m-5 bg-gray-500 flex items-center justify-center inline-block w-40 cursor-pointer overflow-hidden rounded-md border-2 border-[#fbbf24] text-sm  text-[#fbbf24] font-semibold z-10 transition-colors hover:text-black before:absolute before:h-full before:w-full before:rounded before:bg-[#fbbf24] before:content-[''] before:left-full before:top-full before:transition-all before:duration-300 before:-z-10 hover:before:-left-0 hover:before:-top-0;
+  }
+  .cl-formButtonPrimary > span {
+    width: fit-content;
+    margin: 0px auto;
+  }
+  .cl-logoImage {
+    @apply h-20 w-40;
+  }
+  .cl-formFieldInput {
+    @apply py-3;
+  }
+}
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
