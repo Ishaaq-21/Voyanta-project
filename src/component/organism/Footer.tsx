@@ -17,7 +17,7 @@ const Footer = (): JSX.Element => {
         className="flex-col gap-y-3 md:gap-y-0 py-3 md:py-0 md:flex-row  justify-between items-center"
       >
         <div className="main-logo ">
-          <div className=" relative w-44 md:w-60 h-10 md:h-12">
+          <div className=" relative w-40 md:w-52 h-10 md:h-12">
             <Image
               src={mainLogo}
               fill={true}
