@@ -1,7 +1,8 @@
+"use client";
 import { JSX } from "react";
 import { LoginBtn, SingUpBtn } from "./AuthBtn";
 
-const Nav = (): JSX.Element => {
+const NavBar = (): JSX.Element => {
   return (
     <div className="hidden md:block register">
       <LoginBtn small={true} />
@@ -9,4 +10,4 @@ const Nav = (): JSX.Element => {
     </div>
   );
 };
-export default Nav;
+export default NavBar;

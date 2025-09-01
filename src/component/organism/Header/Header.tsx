@@ -3,9 +3,8 @@ import mainLogo from "../../../../public/logo-amber.png";
 import Link from "next/link";
 import Container from "../Container";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { LoginBtn, SingUpBtn } from "./AuthBtn";
 import MobileNav from "./MobNav";
-import Nav from "./Nav";
+import NavBar from "./Nav";
 const Header = () => {
   return (
     <header className="h-20 bg-gray-500">
@@ -20,7 +19,7 @@ const Header = () => {
         </Link>
         <div className="register">
           <SignedOut>
-            <Nav />
+            <NavBar />
             <MobileNav />
           </SignedOut>
           <SignedIn>
