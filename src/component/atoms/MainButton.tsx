@@ -1,32 +1,36 @@
-import React, { JSX } from "react";
+import clsx from "clsx";
+import React, { Children, JSX } from "react";
 
-type MainButtonProps = {
-  buttonName: string;
+type MainButtonBaseProps = {
+  children: React.ReactNode;
+  small?: boolean;
+  className?: string;
 };
+type MainButtonProps<C extends React.ElementType> = MainButtonBaseProps &
+  Omit<React.ComponentPropsWithoutRef<C>, keyof MainButtonBaseProps> & {
+    as?: C;
+  };
 
-const MainButton = ({ buttonName }: MainButtonProps): JSX.Element => {
+const MainButton = <C extends React.ElementType>({
+  children,
+  small,
+  className,
+  as,
+  ...props
+}: MainButtonProps<C>): JSX.Element => {
+  const Component = as || "button";
+  const btnClass = clsx(
+    "inline-flex-center",
+    {
+      "primary-btn-small": small,
+      "primary-btn": !small,
+    },
+    className
+  );
   return (
-    <button
-      className="
-        relative m-5 inline-block h-[2.6em] w-[6em] cursor-pointer overflow-hidden
-        rounded-md border-2 border-[#fbbf24] text-[17px] leading-[2.5em] text-[#fbbf24]
-        font-semibold
-        z-10
-
-        transition-colors hover:text-white
-        
-        before:absolute before:h-[200px] before:w-[150px] before:rounded-full
-        before:bg-[#fbbf24] before:content-['']
-        
-        before:left-full before:top-full before:transition-all before:duration-300
-        
-        before:-z-10
-        
-        hover:before:-left-[30px] hover:before:-top-[30px]
-      "
-    >
-      {buttonName}
-    </button>
+    <Component className={btnClass} {...props}>
+      {children}
+    </Component>
   );
 };
 
