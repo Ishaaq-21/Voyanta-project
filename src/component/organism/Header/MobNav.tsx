@@ -13,10 +13,14 @@ const MobileNav = (): JSX.Element => {
   };
   return (
     <div className="block md:hidden">
-      <FaUser
-        onClick={() => setIsNavOpened((prev) => !prev)}
-        className="h-7 w-7  text-primary"
-      />
+      <button
+        onClick={() => setIsNavOpened(true)}
+        className="text-amber-400"
+        aria-label="Open user menu"
+        aria-expanded={isNavOpened}
+      >
+        <FaUser className="h-7 w-7" />
+      </button>
       {isNavOpened && <LoginOverLay handleClose={handleClose} />}
     </div>
   );
@@ -31,6 +35,9 @@ const LoginOverLay = ({
     onClick={handleClose}
     className="fixed w-full h-full inset-0 bg-black/70 z-40 flex-col gap-y-3 flex-center"
     aria-label="Overlay"
+    aria-labelledby="overlay-title"
+    aria-modal="true"
+    role="dialog"
   >
     <LoginBtn small={false} />
     <SingUpBtn small={false} />
