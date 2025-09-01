@@ -5,6 +5,7 @@ import Container from "../Container";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { LoginBtn, SingUpBtn } from "./AuthBtn";
 import MobileNav from "./MobNav";
+import Nav from "./Nav";
 const Header = () => {
   return (
     <header className="h-20 bg-gray-500">
@@ -14,19 +15,18 @@ const Header = () => {
             src={mainLogo}
             fill={true}
             className="object-cover"
-            alt="main Logo"
+            alt="Voyanta Logo"
           />
         </Link>
-        <div className="hidden md:block register flex items-center justify-center">
+        <div className="register">
           <SignedOut>
-            <LoginBtn small={true} />
-            <SingUpBtn small={true} />
+            <Nav />
+            <MobileNav />
           </SignedOut>
           <SignedIn>
             <UserButton />
           </SignedIn>
         </div>
-        <MobileNav />
       </Container>
     </header>
   );
