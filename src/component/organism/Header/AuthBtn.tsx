@@ -1,19 +1,21 @@
 import MainButton from "@/component/atoms/MainButton";
+import clsx from "clsx";
 import Link from "next/link";
 import { JSX } from "react";
 
+//pirmary-btn (-small) are custom classes defined in the global.css @layer component
 const LoginBtn = ({ small }: { small: boolean }): JSX.Element => {
   return (
-    <Link href={"/sign-in"}>
-      <MainButton buttonName="Login" small={small} />
-    </Link>
+    <MainButton as={Link} href={"/sign-in"} small={small}>
+      Login
+    </MainButton>
   );
 };
 const SingUpBtn = ({ small }: { small: boolean }): JSX.Element => {
   return (
-    <Link href={"/sign-up"}>
-      <MainButton buttonName="Sign-up" small={small} />
-    </Link>
+    <MainButton as={Link} href={"/sign-up"} small={small}>
+      Sign Up
+    </MainButton>
   );
 };
 
