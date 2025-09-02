@@ -4,7 +4,7 @@ const LocationIcon = ({ className = "" }: { className?: string }) => (
   <svg
     className={`w-5 h-5 text-gray-500 mr-2 ${className}`}
     fill="none"
-    stroke="currentColor"
+    stroke="#f59e0b"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >

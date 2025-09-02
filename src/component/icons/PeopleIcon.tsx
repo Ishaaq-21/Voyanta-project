@@ -6,7 +6,7 @@ const PeopleIcon = ({ className = "" }: { className?: string }) => (
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    stroke="#fbbf24"
+    stroke="#f59e0b"
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
