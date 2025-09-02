@@ -1,7 +1,7 @@
 import Image from "next/image";
 import mainLogo from "../../../../public/logo-amber.png";
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../../molecules/Container";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import MobileNav from "./MobNav";
 import NavBar from "./Nav";

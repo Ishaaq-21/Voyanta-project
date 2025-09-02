@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { JSX } from "react";
 import mainLogo from "../../../public/logo-amber.png";
-import Container from "./Container";
+import Container from "../molecules/Container";
 import Link from "next/link";
 
 const footLinks = [
