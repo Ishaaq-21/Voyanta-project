@@ -20,6 +20,8 @@ export interface TourSimple {
   imageCover: string;
   images: string[];
   startDates: string[];
+  stops: number;
+  startLocation: string;
 }
 interface Location {
   _id: string;
