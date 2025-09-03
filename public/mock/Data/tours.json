@@ -14,7 +14,6 @@
       "2021-07-20T09:00:00.000Z",
       "2021-08-18T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2955",
     "name": "The Sea Explorer",
     "duration": 7,
     "maxGroupSize": 15,
@@ -22,32 +21,28 @@
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
     "price": 497,
     "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "description": "Embark on an unforgettable adventure exploring the stunning US East Coast. This 7-day tour will take you from the vibrant city of Miami to the serene beaches of Key West. You'll travel by boat and on foot, discovering hidden gems and enjoying breathtaking ocean views. Activities include snorkeling in crystal-clear waters, exploring historic lighthouses, and relaxing on pristine sandy beaches. This tour is perfect for those who love the sea and want to experience the best of coastal life.",
     "imageCover": "tour-2-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2959",
         "description": "Lummus Park Beach",
         "type": "Point",
         "coordinates": [-80.128473, 25.781842],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c2958",
         "description": "Islamorada",
         "type": "Point",
         "coordinates": [-80.647885, 24.909047],
         "day": 2
       },
       {
-        "_id": "5c88fa8cf4afda39709c2957",
         "description": "Sombrero Beach",
         "type": "Point",
         "coordinates": [-81.0784, 24.707496],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c2956",
         "description": "West Key",
         "type": "Point",
         "coordinates": [-81.768719, 24.552242],
@@ -70,7 +65,6 @@
       "2021-07-20T09:00:00.000Z",
       "2021-10-05T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2951",
     "name": "The Forest Hiker",
     "duration": 5,
     "maxGroupSize": 25,
@@ -82,25 +76,22 @@
     ],
     "price": 397,
     "summary": "Breathtaking hike through the Canadian Banff National Park",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "description": "Immerse yourself in the majestic beauty of the Canadian Rockies with our 5-day hiking tour through Banff National Park. You'll trek through pristine forests, witness stunning turquoise lakes, and marvel at towering glaciers. This tour is designed for nature lovers of all skill levels and includes guided hikes to iconic locations like Lake Louise and Moraine Lake. Keep an eye out for wildlife such as elk, deer, and bears in their natural habitat.",
     "imageCover": "tour-1-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2954",
         "description": "Banff National Park",
         "type": "Point",
         "coordinates": [-116.214531, 51.417611],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c2953",
         "description": "Jasper National Park",
         "type": "Point",
         "coordinates": [-118.076152, 52.875223],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c2952",
         "description": "Glacier National Park of Canada",
         "type": "Point",
         "coordinates": [-117.490309, 51.261937],
@@ -123,7 +114,6 @@
       "2022-02-12T10:00:00.000Z",
       "2023-01-06T10:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c295a",
     "name": "The Snow Adventurer",
     "duration": 4,
     "maxGroupSize": 10,
@@ -135,18 +125,16 @@
     ],
     "price": 997,
     "summary": "Exciting adventure in the snow with snowboarding and skiing",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "description": "Get your adrenaline pumping with our 4-day snow adventure in Aspen, Colorado. Whether you're a seasoned pro or a beginner, you'll have a blast skiing and snowboarding on world-class slopes. Our package includes lift tickets, equipment rentals, and lessons from certified instructors. After a day on the mountain, relax and unwind in a cozy lodge with stunning winter views. This is the ultimate winter getaway for snow sports enthusiasts.",
     "imageCover": "tour-3-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c295c",
         "description": "Aspen Highlands",
         "type": "Point",
         "coordinates": [-106.855385, 39.182677],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c295b",
         "description": "Beaver Creek",
         "type": "Point",
         "coordinates": [-106.516623, 39.60499],
@@ -169,7 +157,6 @@
       "2022-03-20T10:00:00.000Z",
       "2022-08-12T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2961",
     "name": "The Park Camper",
     "duration": 10,
     "maxGroupSize": 15,
@@ -181,32 +168,28 @@
     ],
     "price": 1497,
     "summary": "Breathing in Nature in America's most spectacular National Parks",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "description": "Experience the wonders of the American West on our 10-day camping tour through some of the most iconic National Parks. From the majestic Grand Canyon to the unique landscapes of Zion and Joshua Tree, you'll be surrounded by breathtaking scenery. This tour includes guided hikes, camping under the stars, and opportunities for wildlife viewing. It's a perfect escape for those who want to reconnect with nature and explore the great outdoors.",
     "imageCover": "tour-5-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2965",
         "description": "Zion Canyon National Park",
         "type": "Point",
         "coordinates": [-112.987418, 37.198125],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c2964",
         "description": "Antelope Canyon",
         "type": "Point",
         "coordinates": [-111.376161, 36.86438],
         "day": 4
       },
       {
-        "_id": "5c88fa8cf4afda39709c2963",
         "description": "Grand Canyon National Park",
         "type": "Point",
         "coordinates": [-112.115763, 36.058973],
         "day": 5
       },
       {
-        "_id": "5c88fa8cf4afda39709c2962",
         "description": "Joshua Tree National Park",
         "type": "Point",
         "coordinates": [-116.107963, 34.011646],
@@ -229,7 +212,6 @@
       "2021-05-02T09:00:00.000Z",
       "2021-06-09T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c295d",
     "name": "The City Wanderer",
     "duration": 9,
     "maxGroupSize": 20,
@@ -237,25 +219,22 @@
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
     "price": 1197,
     "summary": "Living the life of Wanderlust in the US' most beatiful cities",
-    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+    "description": "Discover the vibrant culture and iconic landmarks of America's greatest cities. This 9-day tour will take you from the bustling streets of New York City to the sunny shores of Los Angeles and the charming hills of San Francisco. You'll have the freedom to explore each city at your own pace, with guided tours of famous attractions included. This is the perfect trip for urban explorers who want to experience the diverse energy of the USA.",
     "imageCover": "tour-4-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2960",
         "description": "New York",
         "type": "Point",
         "coordinates": [-73.967696, 40.781821],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c295f",
         "description": "Los Angeles",
         "type": "Point",
         "coordinates": [-118.324396, 34.097984],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c295e",
         "description": "San Francisco",
         "type": "Point",
         "coordinates": [-122.408865, 37.787825],
@@ -278,7 +257,6 @@
       "2021-09-06T09:00:00.000Z",
       "2022-03-18T10:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2966",
     "name": "The Sports Lover",
     "duration": 14,
     "maxGroupSize": 8,
@@ -290,39 +268,34 @@
     ],
     "price": 2997,
     "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
-    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
+    "description": "For the ultimate thrill-seeker, our 14-day Sports Lover tour in California is a dream come true. You'll catch waves while surfing in Malibu, shred at the Venice Skate Park, feel the rush of skydiving in San Diego, go rafting on the Kern River, and climb majestic rocks in Yosemite National Park. This action-packed tour is designed for adrenaline junkies and sports enthusiasts looking for their next big adventure.",
     "imageCover": "tour-6-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c296b",
         "description": "Point Dume Beach",
         "type": "Point",
         "coordinates": [-118.809361, 34.003098],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c296a",
         "description": "Venice Skate Park",
         "type": "Point",
         "coordinates": [-118.47549, 33.987367],
         "day": 4
       },
       {
-        "_id": "5c88fa8cf4afda39709c2969",
         "description": "San Diego Skydive",
         "type": "Point",
         "coordinates": [-116.830104, 33.022843],
         "day": 6
       },
       {
-        "_id": "5c88fa8cf4afda39709c2968",
         "description": "Kern River Rafting",
         "type": "Point",
         "coordinates": [-118.4547, 35.710359],
         "day": 7
       },
       {
-        "_id": "5c88fa8cf4afda39709c2967",
         "description": "Yosemite National Park",
         "type": "Point",
         "coordinates": [-119.600492, 37.742371],
@@ -345,7 +318,6 @@
       "2021-10-25T09:00:00.000Z",
       "2022-01-30T10:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2970",
     "name": "The Star Gazer",
     "duration": 9,
     "maxGroupSize": 8,
@@ -353,25 +325,22 @@
     "guides": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
     "price": 2997,
     "summary": "The most remote and stunningly beautiful places for seeing the night sky",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "description": "Escape the city lights and witness the awe-inspiring beauty of the night sky on our 9-day Star Gazer tour. We'll take you to some of the most remote and darkest locations in the USA, including Natural Bridges National Monument and Death Valley National Park, renowned for their incredible stargazing opportunities. With expert guides and high-powered telescopes, you'll explore constellations, planets, and distant galaxies. This is a truly magical experience for astronomy enthusiasts and anyone who appreciates the wonders of the universe.",
     "imageCover": "tour-8-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2973",
         "description": "Natural Bridges National Monument",
         "type": "Point",
         "coordinates": [-109.99953, 37.629017],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c2972",
         "description": "Horseshoe Bend",
         "type": "Point",
         "coordinates": [-111.50954, 36.883269],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c2971",
         "description": "Death Valley National Park",
         "type": "Point",
         "coordinates": [-117.07399, 36.501435],
@@ -394,7 +363,6 @@
       "2022-01-16T10:00:00.000Z",
       "2022-12-12T10:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2974",
     "name": "The Northern Lights",
     "duration": 3,
     "maxGroupSize": 12,
@@ -406,11 +374,10 @@
     ],
     "price": 1497,
     "summary": "Enjoy the Northern Lights in one of the best places in the world",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "description": "Witness one of nature's most spectacular phenomena on our 3-day Northern Lights tour in Yellowknife, Canada. Known as one of the best places in the world to see the Aurora Borealis, you'll spend your nights in a cozy, heated viewing station, sipping hot chocolate while the vibrant colors dance across the sky. This short but unforgettable trip is perfect for anyone wanting to experience the magic of the Northern Lights.",
     "imageCover": "tour-9-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2975",
         "description": "Yellowknife",
         "type": "Point",
         "coordinates": [-114.406097, 62.439943],
@@ -433,7 +400,6 @@
       "2021-04-14T09:00:00.000Z",
       "2021-09-01T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c296c",
     "name": "The Wine Taster",
     "duration": 5,
     "maxGroupSize": 8,
@@ -441,25 +407,22 @@
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
     "price": 1997,
     "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "description": "Indulge your senses on our 5-day Wine Taster tour through California's famous Napa Valley. You'll visit world-renowned vineyards, enjoy exclusive barrel tastings, and learn about the art of winemaking from expert vintners. With scenic views of rolling hills and lush vineyards, this tour is a delight for both the palate and the eyes. It's the perfect getaway for wine connoisseurs and anyone looking to enjoy a relaxing and luxurious experience.",
     "imageCover": "tour-7-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c296f",
         "description": "Beringer Vineyards",
         "type": "Point",
         "coordinates": [-122.479887, 38.510312],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c296e",
         "description": "Clos Pegase Winery & Tasting Room",
         "type": "Point",
         "coordinates": [-122.582948, 38.585707],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c296d",
         "description": "Raymond Vineyard and Cellar",
         "type": "Point",
         "coordinates": [-122.434697, 38.482181],
