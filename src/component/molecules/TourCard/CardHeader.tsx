@@ -24,7 +24,7 @@ const CardHeader = ({
         className="w-full h-full object-cover"
         src={`/tours/${imgCoverPath}`}
         fill={true}
-        alt="tour image"
+        alt={`Cover image for the ${cardTitle} tour`}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 z-10"></div>
       <div className="absolute bottom-4 left-4 right-4 text-white z-20">
