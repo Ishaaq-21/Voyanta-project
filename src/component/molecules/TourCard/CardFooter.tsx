@@ -1,4 +1,6 @@
+import MainButton from "@/component/atoms/MainButton";
 import StarIcon from "@/component/icons/StarIcon";
+import Link from "next/link";
 
 type CardFooterProps = {
   price: number;
@@ -17,9 +19,9 @@ const CardFooter = ({ price, ratingPer, ratingQuantity }: CardFooterProps) => {
           {ratingPer} <span className="ml-1">({ratingQuantity} reviews)</span>
         </div>
       </div>
-      <button className="px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-75 transition-all duration-200 cursor-pointer">
+      <MainButton as={Link} href={"/"} small={true} className="bg-gray-500/70">
         DETAILS
-      </button>
+      </MainButton>
     </div>
   );
 };
