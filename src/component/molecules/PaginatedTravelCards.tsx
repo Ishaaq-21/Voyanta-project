@@ -5,7 +5,11 @@ import { TourSimple } from "@/Types/Types";
 
 const GRID_ITEMS = 6;
 
-const SelectedTravels = ({ travelItems }: { travelItems: TourSimple[] }) => {
+const PaginatedTravelCards = ({
+  travelItems,
+}: {
+  travelItems: TourSimple[];
+}) => {
   const [selectedPage, setSelectedPage] = useState<number>(1);
   const totalPages = useRef(Math.ceil(travelItems.length / GRID_ITEMS));
 
@@ -78,4 +82,4 @@ const PageBtn = ({ selectedPage, btnOrder, handlePageClick }: PageBtnProps) => {
   );
 };
 
-export default SelectedTravels;
+export default PaginatedTravelCards;
