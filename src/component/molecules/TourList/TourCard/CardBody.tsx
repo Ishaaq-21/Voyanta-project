@@ -1,7 +1,7 @@
-import LocationIcon from "../../icons/LocationIcon";
-import CalendarIcon from "../../icons/CalendarIcon";
-import StopsIcon from "../../icons/StopsIcon";
-import PeopleIcon from "../../icons/PeopleIcon";
+import LocationIcon from "@/component/icons/LocationIcon";
+import CalendarIcon from "@/component/icons/CalendarIcon";
+import StopsIcon from "@/component/icons/StopsIcon";
+import PeopleIcon from "@/component/icons/PeopleIcon";
 import { TourSimple } from "@/Types/Types";
 import { monthYearDate } from "@/utils/dateUtils/Date";
 

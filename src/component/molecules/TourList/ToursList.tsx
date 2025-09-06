@@ -1,7 +1,7 @@
-import Container from "./Container";
+import Container from "../Container";
 import { TourSimple } from "@/Types/Types";
 import { getAllSimpleTravels } from "@/_lib/apiClient";
-import PaginatedTravelCards from "./PaginatedTravelCards";
+import PaginatedTravelCards from "./PaginatedTravels/PaginatedTravelCards";
 
 const TourList = async () => {
   const toursList: TourSimple[] = await getAllSimpleTravels();
