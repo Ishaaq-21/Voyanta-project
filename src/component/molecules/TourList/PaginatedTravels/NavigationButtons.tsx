@@ -13,6 +13,7 @@ const NavButtons = ({
 }: NavButtonsProps) => {
   const handlePageClick = (btnPage: number) => {
     setSelectedPage(btnPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div className="flex-center gap-5 w-fit  absolute left-1/2 -translate-x-1/2 bottom-4">
