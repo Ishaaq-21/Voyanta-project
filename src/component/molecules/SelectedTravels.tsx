@@ -18,13 +18,21 @@ const SelectedTravels = ({ travelItems }: { travelItems: TourSimple[] }) => {
   };
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-6">
+      <div className="grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-8 place-items-center mb-8">
         {selectedList.length > 0 &&
           selectedList.map((currTour) => {
             return <TourCard key={currTour.id} tourElement={currTour} />;
           })}
       </div>
-      <div className="flex-center gap-5 w-fit  mt-5 absolute left-1/2 -translate-x-1/2 bottom-4">
+      <div className="flex-center gap-5 w-fit  absolute left-1/2 -translate-x-1/2 bottom-4">
+        {selectedPage <= totalPages.current && selectedPage > 1 && (
+          <button
+            className="p-3 flex-center cursor-pointer w-10 h-10 hover:bg-gray-200 transition duration-300 rounded-full text-base font-bold"
+            onClick={() => setSelectedPage(selectedPage - 1)}
+          >
+            {"<<"}
+          </button>
+        )}
         {Array.from({ length: totalPages.current }).map((_, i) => {
           return (
             <PageBtn
@@ -35,6 +43,14 @@ const SelectedTravels = ({ travelItems }: { travelItems: TourSimple[] }) => {
             />
           );
         })}
+        {selectedPage < totalPages.current && (
+          <button
+            className="p-3 flex-center cursor-pointer w-10 h-10 hover:bg-gray-200 transition duration-300 rounded-full text-base font-bold"
+            onClick={() => setSelectedPage(selectedPage + 1)}
+          >
+            {">>"}
+          </button>
+        )}
       </div>
     </>
   );
