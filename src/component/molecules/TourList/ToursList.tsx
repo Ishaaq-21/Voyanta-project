@@ -7,7 +7,6 @@ import NavButtons from "./PaginatedTravels/NavigationButtons";
 const GRID_ITEMS = 6;
 
 const TourList = async ({ currPage }: { currPage: number }) => {
-  console.log("searparams page :  ->   " + currPage); // what is the problem I keep getting undefined ? (the url page has /?page=somenumber)
   const { toursList, totalPages } = await getAllSimpleTravels({
     currPage,
     limit: GRID_ITEMS,
