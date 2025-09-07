@@ -11,12 +11,12 @@ const PaginatedTravelCards = ({
 }: {
   travelItems: TourSimple[];
 }) => {
-  const [selectedPage, setSelectedPage] = useState<number>(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = useRef(Math.ceil(travelItems.length / GRID_ITEMS));
 
   const selectedList = travelItems.slice(
-    (selectedPage - 1) * GRID_ITEMS,
-    selectedPage * GRID_ITEMS
+    (currentPage - 1) * GRID_ITEMS,
+    currentPage * GRID_ITEMS
   );
 
   return (
@@ -28,8 +28,8 @@ const PaginatedTravelCards = ({
           })}
       </div>
       <NavButtons
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
         totalPages={totalPages.current}
       />
     </>

@@ -1,30 +1,31 @@
 import PageBtn from "./NavBtn";
 
 type NavButtonsProps = {
-  selectedPage: number;
-  setSelectedPage: (pageNum: number) => void;
+  currentPage: number;
+  setCurrentPage: (pageNum: number) => void;
   totalPages: number;
 };
 
 const NavButtons = ({
-  selectedPage,
-  setSelectedPage,
+  currentPage,
+  setCurrentPage,
   totalPages,
 }: NavButtonsProps) => {
   const handlePageClick = (btnPage: number) => {
-    setSelectedPage(btnPage);
+    setCurrentPage(btnPage);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div className="flex-center gap-5 w-fit  absolute left-1/2 -translate-x-1/2 bottom-4">
       <button
         className={`p-3 flex-center cursor-pointer w-10 h-10 hover:bg-gray-200 transition duration-300 rounded-full text-base font-bold ${
-          selectedPage <= totalPages && selectedPage > 1
+          // this condition for disabling prevButton  when it
+          currentPage <= totalPages && currentPage > 1
             ? "text-black"
             : "text-gray-400"
         }`}
-        onClick={() => setSelectedPage(selectedPage - 1)}
-        disabled={!(selectedPage <= totalPages && selectedPage > 1)}
+        onClick={() => setCurrentPage(currentPage - 1)}
+        disabled={!(currentPage <= totalPages && currentPage > 1)}
       >
         {"<<"}
       </button>
@@ -32,7 +33,7 @@ const NavButtons = ({
         return (
           <PageBtn
             key={i}
-            selectedPage={selectedPage}
+            currentPage={currentPage}
             btnOrder={i + 1}
             handlePageClick={handlePageClick}
           />
@@ -40,10 +41,10 @@ const NavButtons = ({
       })}
       <button
         className={`p-3 flex-center cursor-pointer w-10 h-10 hover:bg-gray-200 transition duration-300 rounded-full text-base font-bold ${
-          selectedPage < totalPages ? "text-black" : "text-gray-400"
+          currentPage < totalPages ? "text-black" : "text-gray-400"
         }`}
-        onClick={() => setSelectedPage(selectedPage + 1)}
-        disabled={!(selectedPage < totalPages)}
+        onClick={() => setCurrentPage(currentPage + 1)}
+        disabled={!(currentPage < totalPages)}
       >
         {">>"}
       </button>
