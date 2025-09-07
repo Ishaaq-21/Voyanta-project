@@ -2,7 +2,7 @@
 @layer base, clerk, components, utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #eeeeee;
   --foreground: #171717;
   --primary-color: #fbbf24;
   --primary-dark-color: #d39a0b;
