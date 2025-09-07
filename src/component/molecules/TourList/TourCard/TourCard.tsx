@@ -11,23 +11,18 @@ type TourCardProps = {
 
 function TourCard({ tourElement }: TourCardProps) {
   return (
-    <div
-      className="bg-[#f0f2f5]  flex justify-center items-center p-2 rounded-xl w-full"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-    >
-      <div className=" w-full mx-auto bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-[0px_0px_7px_black]">
-        <CardHeader
-          imgCoverPath={tourElement.imageCover}
-          cardTitle={tourElement.name}
+    <div className=" w-full mx-auto bg-white rounded-xl shadow-[0px_0px_7px_black] overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_black]">
+      <CardHeader
+        imgCoverPath={tourElement.imageCover}
+        cardTitle={tourElement.name}
+      />
+      <div className="card-body-container p-6">
+        <CardBody tourBody={tourElement} />
+        <CardFooter
+          price={tourElement.price}
+          ratingPer={tourElement.ratingsAverage}
+          ratingQuantity={tourElement.ratingsQuantity}
         />
-        <div className="card-body-container p-6">
-          <CardBody tourBody={tourElement} />
-          <CardFooter
-            price={tourElement.price}
-            ratingPer={tourElement.ratingsAverage}
-            ratingQuantity={tourElement.ratingsQuantity}
-          />
-        </div>
       </div>
     </div>
   );
