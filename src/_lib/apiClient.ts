@@ -6,7 +6,13 @@ import { TourSimple } from "@/Types/Types"; // Make sure to import your type
 
 const sleep = new Promise((resolve) => setTimeout(resolve, 15000));
 
-export async function getAllSimpleTravels(): Promise<TourSimple[]> {
+export async function getAllSimpleTravels({
+  currPage,
+  limit,
+}: {
+  currPage: number;
+  limit: number;
+}) {
   // Get the full path to the file.
   // process.cwd() points to the root of your Next.js project.
   const filePath = path.join(
@@ -16,12 +22,18 @@ export async function getAllSimpleTravels(): Promise<TourSimple[]> {
     "Data",
     "tours-simple.json"
   );
-
   // Read the file's contents from the disk.
   const jsonData = await fs.readFile(filePath, "utf8");
 
   // Parse the JSON string into a JavaScript object.
-  const data = JSON.parse(jsonData);
+  const dataArr = JSON.parse(jsonData);
 
-  return data;
+  const startIndex = (currPage - 1) * limit;
+  const endIndex = currPage * limit;
+  const paginatedList = dataArr.slice(startIndex, endIndex);
+
+  return {
+    toursList: paginatedList,
+    totalPages: Math.ceil(dataArr.length / limit),
+  };
 }
