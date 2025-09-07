@@ -16,7 +16,7 @@ const NavButtons = ({ currentPage, totalPages }: NavButtonsProps) => {
             ? "text-black"
             : "text-gray-400 pointer-events-none  "
         }`}
-        href={`/?page=${currentPage + 1}`}
+        href={`/?page=${currentPage - 1}`}
       >
         {"<<"}
       </Link>
@@ -29,7 +29,7 @@ const NavButtons = ({ currentPage, totalPages }: NavButtonsProps) => {
             ? "text-black"
             : "text-gray-400 pointer-events-none"
         }`}
-        href={`/?page=${currentPage - 1}`}
+        href={`/?page=${currentPage + 1}`}
       >
         {">>"}
       </Link>
