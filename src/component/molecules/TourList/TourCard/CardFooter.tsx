@@ -19,7 +19,7 @@ const CardFooter = ({ price, ratingPer, ratingQuantity }: CardFooterProps) => {
           {ratingPer} <span className="ml-1">({ratingQuantity} reviews)</span>
         </div>
       </div>
-      <MainButton as={Link} href={"/"} small={true} className="bg-gray-500/70">
+      <MainButton as={Link} href={"/"} small={true} className="bg-gray-500">
         DETAILS
       </MainButton>
     </div>
