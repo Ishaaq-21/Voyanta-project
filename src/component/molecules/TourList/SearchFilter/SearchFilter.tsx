@@ -1,37 +1,51 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Using lucide-react for icons, which fits the clean aesthetic.
 // You can install it with: npm install lucide-react
 import FilterDropDown from "./FilterDropDown";
 import SearchInput from "./SearchInput";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { TourType } from "@/Types/Types";
 
+// I need to understand what happened here in details
 const ToursSearch = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [tourType, setTourType] = useState<TourType>("all");
-
-  const pathname = usePathname();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-  const handleSearchSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [searchTerm, setSearchTerm] = useState(
+    searchParams.get("searchTerm") || ""
+  );
+  const [tourType, setTourType] = useState<TourType>(
+    (searchParams.get("tourType") as TourType) || "all"
+  );
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
 
-    router.replace(
-      `${pathname}?page=1${
-        searchTerm !== "" ? `&searchTerm=${searchTerm}` : ""
-      }${tourType !== "all" ? `&tourType=${tourType}` : ""}`
-    );
-  };
+    if (searchTerm) {
+      params.set("searchTerm", searchTerm);
+    } else {
+      params.delete("searchTerm");
+    }
+
+    params.set("page", "1");
+    if (tourType) {
+      params.set("tourType", tourType);
+    } else {
+      params.delete("tourType");
+    }
+    const debounceId = setTimeout(() => {
+      router.replace(`${pathname}?${params.toString()}`);
+    }, 300);
+
+    return () => clearTimeout(debounceId);
+  }, [pathname, searchParams, router, searchTerm, tourType]);
 
   return (
     <div className="flex justify-center items-center mb-16 font-sans px-4">
-      <form
-        onSubmit={handleSearchSubmit}
-        className="flex flex-col md:flex-row items-center w-full max-w-3xl bg-white rounded-2xl md:rounded-full shadow-lg p-4 md:p-2 transition-all duration-300 focus-within:shadow-xl gap-3 md:gap-0"
-      >
+      <div className="flex flex-col md:flex-row items-center w-full max-w-3xl bg-white rounded-2xl md:rounded-full shadow-lg p-4 md:p-2 transition-all duration-300 focus-within:shadow-xl gap-3 md:gap-0">
         {/*Search Input */}
         <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
@@ -52,7 +66,7 @@ const ToursSearch = () => {
         >
           Search
         </button>
-      </form>
+      </div>
     </div>
   );
 };
