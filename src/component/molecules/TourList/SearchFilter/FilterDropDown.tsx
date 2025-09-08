@@ -1,6 +1,6 @@
+import { TourType } from "@/Types/Types";
 import { ChevronDown, MapPin } from "lucide-react";
 
-type TourType = "all" | "easy" | "medium" | "difficult";
 type FilterDropDownType = {
   tourType: TourType;
   setTourType: (tourType: TourType) => void;
