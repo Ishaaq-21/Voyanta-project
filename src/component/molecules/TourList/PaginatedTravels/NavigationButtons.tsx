@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import PageBtn from "./NavBtn";
+import { useSearchParams } from "next/navigation";
 
 type NavButtonsProps = {
   currentPage: number;
@@ -7,6 +9,15 @@ type NavButtonsProps = {
 };
 
 const NavButtons = ({ currentPage, totalPages }: NavButtonsProps) => {
+  const searchParams = useSearchParams();
+
+  const createNewPage = (pageNum: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", String(pageNum));
+
+    return `/?${params.toString()}`;
+  };
+
   return (
     <div className="flex-center gap-5 w-fit  absolute left-1/2 -translate-x-1/2 -bottom-20">
       {totalPages > 0 && (
@@ -17,7 +28,7 @@ const NavButtons = ({ currentPage, totalPages }: NavButtonsProps) => {
               ? "text-black"
               : "text-gray-400 pointer-events-none  "
           }`}
-          href={`/?page=${currentPage - 1}`}
+          href={createNewPage(currentPage - 1)}
         >
           {"<<"}
         </Link>
@@ -32,7 +43,7 @@ const NavButtons = ({ currentPage, totalPages }: NavButtonsProps) => {
               ? "text-black"
               : "text-gray-400 pointer-events-none"
           }`}
-          href={`/?page=${currentPage + 1}`}
+          href={`${createNewPage(currentPage + 1)}`}
         >
           {">>"}
         </Link>
