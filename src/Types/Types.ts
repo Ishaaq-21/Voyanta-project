@@ -64,3 +64,4 @@ export interface User {
   photo: string;
   password: string;
 }
+export type TourType = "all" | "easy" | "medium" | "difficult";
