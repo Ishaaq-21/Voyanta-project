@@ -55,15 +55,6 @@ const ToursSearch = () => {
 
         {/* Filter Dropdown */}
         <FilterDropDown tourType={tourType} setTourType={setTourType} />
-
-        {/* Search Button */}
-        <button
-          type="submit"
-          className="w-full md:w-auto md:ml-2 bg-primary hover:bg-dark-primary transition duration-300 text-white font-semibold uppercase tracking-wider px-8 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
-          style={{ letterSpacing: "0.05em" }}
-        >
-          Search
-        </button>
       </div>
     </div>
   );
