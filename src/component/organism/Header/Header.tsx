@@ -15,6 +15,7 @@ const Header = () => {
             fill={true}
             className="object-cover"
             alt="Voyanta Logo"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Link>
         <div className="register">

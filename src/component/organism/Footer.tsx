@@ -23,6 +23,7 @@ const Footer = (): JSX.Element => {
               fill={true}
               className="object-cover"
               alt="main Logo"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>
