@@ -14,22 +14,20 @@ const ToursSearch = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
-
   const [searchTerm, setSearchTerm] = useState(
     searchParams.get("searchTerm") || ""
   );
   const [tourType, setTourType] = useState<TourType>(
     (searchParams.get("tourType") as TourType) || "all"
   );
+
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
-
     if (searchTerm) {
       params.set("searchTerm", searchTerm);
     } else {
       params.delete("searchTerm");
     }
-
     params.set("page", "1");
     if (tourType) {
       params.set("tourType", tourType);
@@ -41,7 +39,7 @@ const ToursSearch = () => {
     }, 300);
 
     return () => clearTimeout(debounceId);
-  }, [pathname, searchParams, router, searchTerm, tourType]);
+  }, [pathname, router, searchTerm, tourType]);
 
   return (
     <div className="flex justify-center items-center mb-16 font-sans px-4">
