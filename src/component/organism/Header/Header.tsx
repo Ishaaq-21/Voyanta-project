@@ -7,7 +7,7 @@ import MobileNav from "./MobNav";
 import NavBar from "./Nav";
 const Header = () => {
   return (
-    <header className="h-20 bg-gray-500">
+    <header className="h-20 bg-gray-500 relative z-50">
       <Container flex={true} className="justify-between items-center">
         <Link href={"/"} className="relative w-40 md:w-52 h-10 md:h-12 ">
           <Image
