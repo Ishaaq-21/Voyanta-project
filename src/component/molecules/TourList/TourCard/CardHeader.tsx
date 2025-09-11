@@ -27,7 +27,7 @@ const CardHeader = ({
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         alt={`Cover image for the ${cardTitle} tour`}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-800/80 to-transparent opacity-80 z-10"></div>
       <div className="absolute bottom-4 left-4 right-4 text-white z-20">
         <h1 className="text-3xl font-extrabold tracking-tight">
           {firstPart.toUpperCase()}
