@@ -8,12 +8,7 @@
   --primary-dark-color: #d39a0b;
   --primary-light-color: #f7cc61;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 @theme {
   --color-primary: var(--primary-color);
   --color-dark-primary: var(--primary-dark-color);
