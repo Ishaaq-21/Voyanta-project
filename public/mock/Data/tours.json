@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "startLocation": {
       "description": "Miami, USA",
       "type": "Point",
@@ -51,6 +52,7 @@
     ]
   },
   {
+    "id": 2,
     "startLocation": {
       "description": "Banff, CAN",
       "type": "Point",
@@ -100,6 +102,7 @@
     ]
   },
   {
+    "id": 3,
     "startLocation": {
       "description": "Aspen, USA",
       "type": "Point",
@@ -143,6 +146,7 @@
     ]
   },
   {
+    "id": 4,
     "startLocation": {
       "description": "Las Vegas, USA",
       "type": "Point",
@@ -198,6 +202,7 @@
     ]
   },
   {
+    "id": 5,
     "startLocation": {
       "description": "NYC, USA",
       "type": "Point",
@@ -243,6 +248,7 @@
     ]
   },
   {
+    "id": 6,
     "startLocation": {
       "description": "California, USA",
       "type": "Point",
@@ -304,6 +310,7 @@
     ]
   },
   {
+    "id": 7,
     "startLocation": {
       "description": "Utah, USA",
       "type": "Point",
@@ -349,6 +356,7 @@
     ]
   },
   {
+    "id": 8,
     "startLocation": {
       "description": "Yellowknife, CAN",
       "type": "Point",
@@ -386,6 +394,7 @@
     ]
   },
   {
+    "id": 9,
     "startLocation": {
       "description": "California, USA",
       "type": "Point",
