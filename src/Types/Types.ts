@@ -37,6 +37,7 @@ interface StartLocation {
   coordinates: [number, number];
   address: string;
 }
+
 export interface Tour {
   startLocation: StartLocation;
   ratingsAverage: number;
@@ -65,3 +66,8 @@ export interface User {
   password: string;
 }
 export type TourType = "all" | "easy" | "medium" | "difficult";
+
+//this type is for the tour details page sections
+export type TourSecProps = {
+  tourData: Tour;
+};
