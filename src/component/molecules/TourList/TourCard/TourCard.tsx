@@ -22,6 +22,7 @@ function TourCard({ tourElement }: TourCardProps) {
           price={tourElement.price}
           ratingPer={tourElement.ratingsAverage}
           ratingQuantity={tourElement.ratingsQuantity}
+          tourId={tourElement.id}
         />
       </div>
     </div>

@@ -6,9 +6,15 @@ type CardFooterProps = {
   price: number;
   ratingPer: number;
   ratingQuantity: number;
+  tourId: number;
 };
 
-const CardFooter = ({ price, ratingPer, ratingQuantity }: CardFooterProps) => {
+const CardFooter = ({
+  price,
+  ratingPer,
+  ratingQuantity,
+  tourId,
+}: CardFooterProps) => {
   return (
     <div className="flex-between-center mt-6 pt-6 border-t border-gray-100">
       <div>
@@ -19,7 +25,12 @@ const CardFooter = ({ price, ratingPer, ratingQuantity }: CardFooterProps) => {
           {ratingPer} <span className="ml-1">({ratingQuantity} reviews)</span>
         </div>
       </div>
-      <MainButton as={Link} href={"/"} small={true} className="bg-gray-500">
+      <MainButton
+        as={Link}
+        href={`/tours/${tourId}`}
+        small={true}
+        className="bg-gray-500"
+      >
         DETAILS
       </MainButton>
     </div>
