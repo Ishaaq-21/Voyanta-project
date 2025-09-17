@@ -7,11 +7,10 @@ const TourHero = ({ tourData }: TourSecProps) => {
       {/* Background Image & Overlay */}
       <div className="absolute -top-[70px] w-full h-[100vh] -skew-y-5">
         <Image
-          src={tourData.images[0]}
+          src={`/tours/${tourData.images[0]}`}
           alt="Mountain landscape"
           className="w-full h-full object-cover"
           fill={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-slate-900/60 backdrop-brightness-75"></div>
       </div>
