@@ -2,21 +2,15 @@
 // This component is designed for a dynamic route like /tours/the-forest-hiker
 
 import type { FC } from "react";
-import {
-  Star,
-  MapPin,
-  Calendar,
-  Users,
-  ShieldCheck,
-  Mountain,
-  ChevronRight,
-} from "lucide-react";
+import { Star } from "lucide-react";
 import TourHero from "@/component/organism/TourDetailsPage/Hero";
 import { Tour } from "@/Types/Types";
 import ExpeditionSec from "@/component/organism/TourDetailsPage/Expedition";
 import Gallery from "@/component/organism/TourDetailsPage/Gallery";
 import Reviews from "@/component/organism/TourDetailsPage/Reviews";
 import CTA from "@/component/organism/TourDetailsPage/CTA";
+import { getDetailedTourById } from "@/_lib/apiClient";
+import { notFound } from "next/navigation";
 
 // --- DUMMY DATA ---
 // In a real application, you would fetch this data based on the route's 'id' parameter.
@@ -108,25 +102,26 @@ const StarRating: FC<{ rating: number }> = ({ rating }) => {
 
 // --- MAIN PAGE COMPONENT ---
 
-const TourDetailsPage: FC = () => {
-  // In a real Next.js app, you might get the tour data like this:
-  // const { id } = params;
-  // const tourData = await getTourById(id);
-
+const TourDetailsPage = async ({ params }: { params: { id: string } }) => {
+  const id = params.id;
+  const tourData = await getDetailedTourById(id);
+  if (!tourData) {
+    notFound();
+  }
   return (
     <div className="bg-slate-50 text-gray-800 relative">
       {/* 1. Hero Section */}
-      <TourHero tourData={sampleTour} />
+      <TourHero tourData={tourData} />
 
-      <ExpeditionSec tourData={sampleTour} />
+      <ExpeditionSec tourData={tourData} />
 
-      <Gallery tourData={sampleTour} />
+      <Gallery tourData={tourData} />
 
       {/* 5. Reviews Section */}
-      <Reviews tourData={sampleTour} />
+      <Reviews tourData={tourData} />
 
       {/* 6. CTA Section */}
-      <CTA tourData={sampleTour} />
+      <CTA tourData={tourData} />
     </div>
   );
 };
