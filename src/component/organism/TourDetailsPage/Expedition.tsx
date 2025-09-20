@@ -1,4 +1,6 @@
-import { TourSecProps } from "@/Types/Types";
+import { getUserById } from "@/_lib/apiClient";
+import { TourSecProps, User } from "@/Types/Types";
+import Image from "next/image";
 
 const ExpeditionSec = ({ tourData }: TourSecProps) => {
   return (
@@ -22,16 +24,24 @@ const ExpeditionSec = ({ tourData }: TourSecProps) => {
           <h3 className="text-2xl font-bold uppercase tracking-wider text-white">
             Your Field Experts
           </h3>
-          {tourData.guides.map((guide) => (
-            <div key={guide} className="flex items-center space-x-4">
-              {/* here since I will store just the id of the guides in the guides arr, I will call for each one from the database than writes its data */}
-              {/* I need to place a photo image for the user */}
-              <div>
-                <p className="font-bold text-lg text-white">Guide Name</p>
-                <p className="text-primary">Camper</p>
+          {tourData.guides.map(async (guide) => {
+            const user: User = await getUserById(guide);
+            return (
+              <div key={guide} className="flex items-center space-x-8">
+                <Image
+                  src={`/users/${user.photo}`}
+                  alt={`Photo of ${user.name}`}
+                  className="rounded-full"
+                  width={50}
+                  height={50}
+                />
+                <div>
+                  <p className="font-bold text-lg text-white">{user.name}</p>
+                  <p className="text-primary">{user.role}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
