@@ -2,7 +2,13 @@ import { getUserById } from "@/_lib/apiClient";
 import { TourSecProps, User } from "@/Types/Types";
 import Image from "next/image";
 
-const ExpeditionSec = ({ tourData }: TourSecProps) => {
+const ExpeditionSec = async ({ tourData }: TourSecProps) => {
+  const guidesPromise: Promise<User>[] = tourData.guides.map((guide) =>
+    getUserById(guide)
+  );
+
+  const guides: User[] = await Promise.all(guidesPromise);
+
   return (
     <section className="relative text-slate-300 py-20 md:py-28 -skew-y-5 ">
       <div className="absolute inset-0 w-full h-full bg-slate-900 bg-slate-900 "></div>{" "}
@@ -24,20 +30,21 @@ const ExpeditionSec = ({ tourData }: TourSecProps) => {
           <h3 className="text-2xl font-bold uppercase tracking-wider text-white">
             Your Field Experts
           </h3>
-          {tourData.guides.map(async (guide) => {
-            const user: User = await getUserById(guide);
+          {guides.map(async (userGuide) => {
             return (
-              <div key={guide} className="flex items-center space-x-8">
+              <div key={userGuide.name} className="flex items-center space-x-8">
                 <Image
-                  src={`/users/${user.photo}`}
-                  alt={`Photo of ${user.name}`}
+                  src={`/users/${userGuide.photo}`}
+                  alt={`Photo of ${userGuide.name}`}
                   className="rounded-full"
                   width={50}
                   height={50}
                 />
                 <div>
-                  <p className="font-bold text-lg text-white">{user.name}</p>
-                  <p className="text-primary">{user.role}</p>
+                  <p className="font-bold text-lg text-white">
+                    {userGuide.name}
+                  </p>
+                  <p className="text-primary">{userGuide.role}</p>
                 </div>
               </div>
             );
