@@ -43,9 +43,10 @@ const StarRating: FC<{ rating: number }> = ({ rating }) => {
 
 // --- MAIN PAGE COMPONENT ---
 
-const TourDetailsPage = async ({ params }: { params: { id: string } }) => {
-  const id = params.id;
-  const tourData = await getDetailedTourById(id);
+const TourDetailsPage = async ({ params }: { params: { tourId: string } }) => {
+  const { tourId } = params;
+
+  const tourData = await getDetailedTourById(tourId);
   if (!tourData) {
     notFound();
   }
@@ -57,6 +58,8 @@ const TourDetailsPage = async ({ params }: { params: { id: string } }) => {
       <ExpeditionSec tourData={tourData} />
 
       <Gallery tourData={tourData} />
+
+      <MapWrapper locations={tourData.locations} />
 
       {/* 5. Reviews Section */}
       <Reviews tourData={tourData} />
