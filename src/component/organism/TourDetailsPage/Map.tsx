@@ -1,4 +1,3 @@
-// src/components/MapWithMarkers.tsx
 "use client";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -16,7 +15,6 @@ L.Icon.Default.mergeOptions({
   iconUrl: markerIcon.src,
   shadowUrl: markerShadow.src,
 });
-
 export default function MapWithMarkers({
   locations,
 }: {
@@ -26,25 +24,32 @@ export default function MapWithMarkers({
   const center: [number, number] = locations.length
     ? [locations[0].coordinates[0], locations[0].coordinates[1]]
     : [51.505, -0.09];
-
+  console.log(center);
   return (
-    <MapContainer
-      center={center}
-      zoom={10}
-      style={{ height: "400px", width: "100%" }}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {locations.map((l) => (
-        <Marker
-          key={l.description}
-          position={[l.coordinates[0], l.coordinates[1]]}
-        >
-          <Popup>{l.description}</Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <section className="relative -skew-y-5 overflow-hidden h-[400px]">
+      <div className="absolute inset-0 w-full h-full  bg-blue-500 !skew-y-5"></div>{" "}
+      <MapContainer
+        scrollWheelZoom={false}
+        doubleClickZoom={false}
+        touchZoom={false}
+        zoomControl={false}
+        center={center}
+        zoom={8}
+        style={{ height: "400px", width: "100%" }}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {locations.map((l) => (
+          <Marker
+            key={l.description}
+            position={[l.coordinates[0], l.coordinates[1]]}
+          >
+            <Popup>{l.description}</Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </section>
   );
 }
