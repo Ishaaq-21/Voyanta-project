@@ -2,8 +2,8 @@ export type Reviews = {
   _id: string;
   review: string;
   rating: number;
-  userId: "string";
-  tourId: string;
+  user: "string";
+  tour: string;
 };
 
 export interface TourSimple {
