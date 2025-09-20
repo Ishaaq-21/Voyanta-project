@@ -23,7 +23,7 @@ export interface TourSimple {
   stops: number;
   startLocation: string;
 }
-interface Location {
+export interface Location {
   _id: string;
   description: string;
   type: string;
@@ -44,7 +44,7 @@ export interface Tour {
   ratingsQuantity: number;
   images: string[];
   startDates: string[];
-  _id: string;
+  id: string;
   name: string;
   duration: number;
   maxGroupSize: number;
