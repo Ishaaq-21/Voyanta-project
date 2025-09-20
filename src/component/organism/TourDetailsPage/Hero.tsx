@@ -19,7 +19,7 @@ const TourHero = ({ tourData }: TourSecProps) => {
       <div className="relative z-10 text-center space-y-8">
         <div>
           <h1 className="font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-tighter uppercase text-primary">
-            The {tourData.name}
+            {tourData.name}
           </h1>
           <p className="mt-2 text-lg md:text-xl text-white font-medium">
             An Unforgettable Journey into the Wild
