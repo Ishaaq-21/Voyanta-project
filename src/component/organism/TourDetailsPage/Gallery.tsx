@@ -19,7 +19,7 @@ const Gallery = ({ tourData }: TourSecProps) => {
             return (
               <div
                 key={imgPath}
-                className={`p-3 rounded-md shadow-2xl transform  h-52 overflow-hidden ${
+                className={`relative p-3 rounded-md shadow-2xl transform w-full h-[200px]  overflow-hidden ${
                   index % 2 === 0
                     ? "bg-slate-800 lg:-rotate-3"
                     : "bg-dark-primary lg:rotate-3"
@@ -28,7 +28,7 @@ const Gallery = ({ tourData }: TourSecProps) => {
                 <Image
                   src={`/tours/${imgPath}`}
                   alt={imgPath}
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                   fill={true}
                 />
               </div>
