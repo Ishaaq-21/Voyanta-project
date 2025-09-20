@@ -15,7 +15,7 @@ const Reviews = async ({ tourData }: TourSecProps) => {
           Reviews
         </h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tourReviews.length > 0 &&
+          {tourReviews.length > 0 ? (
             tourReviews.map(async (review: Reviews) => {
               const user: User = await getUserById(review.user);
               return (
@@ -38,7 +38,12 @@ const Reviews = async ({ tourData }: TourSecProps) => {
                   <p className="text-gray-600 italic">" {review.review} "</p>
                 </div>
               );
-            })}
+            })
+          ) : (
+            <p className="text-xl mt-10 mx-auto w-fit font-bold col-span-full">
+              No reviews in this tour
+            </p>
+          )}
         </ul>
         <div className="text-center mt-12">
           <MainButton as={Link} href={`/tours/reviews/${tourData.id}`}>
