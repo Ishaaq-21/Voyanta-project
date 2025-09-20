@@ -1,33 +1,47 @@
+import { getReviewsByTourId, getUserById } from "@/_lib/apiClient";
 import MainButton from "@/component/atoms/MainButton";
-import { TourSecProps } from "@/Types/Types";
+import type { Reviews, TourSecProps, User } from "@/Types/Types";
+import Image from "next/image";
 import Link from "next/link";
 
-const Reviews = ({ tourData }: TourSecProps) => {
+const Reviews = async ({ tourData }: TourSecProps) => {
+  const tourReviews: Reviews[] = await getReviewsByTourId(tourData.id);
+
   return (
-    // here I think I will get all the reviews that matches the tour id from the database than iterate over them and write details for each one
-    <section className="py-12 md:py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            key={tourData.name}
-            className="bg-white p-6 rounded-xl shadow-md flex flex-col"
-          >
-            <div className="flex items-center mb-4">
-              {/* <img
-                  src={review.avatar}
-                  alt={review.name}
-                  className="w-14 h-14 rounded-full object-cover mr-4"
-                /> */}
-              <div>
-                <p className="font-bold">Review name</p>
-                {/* <StarRating rating={rev.rating} /> */}
-              </div>
-            </div>
-            <p className="text-gray-600 italic">"Goood"</p>
-          </div>
-        </div>
+    <section className="py-12 md:py-24  -skew-y-5">
+      <div className="container mx-auto px-4 skew-y-5">
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-700 bg-clip-text text-transparent tracking-tight uppercase mb-5 mx-auto w-fit">
+          {" "}
+          Reviews
+        </h2>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tourReviews.length > 0 &&
+            tourReviews.map(async (review: Reviews) => {
+              const user: User = await getUserById(review.user);
+              return (
+                <div
+                  key={review._id}
+                  className="bg-white p-6 rounded-xl shadow-lg text-center flex flex-col justify-center"
+                >
+                  <div className="flex items-center gap-5 mb-8">
+                    <Image
+                      src={`/users/${user.photo}`}
+                      alt={`photo of ${user.photo}`}
+                      width={50}
+                      height={50}
+                      className="rounded-full"
+                    />
+                    <p className="font-bold flex align-center text-dark-primary h-fit mb-2">
+                      {user.name}
+                    </p>
+                  </div>
+                  <p className="text-gray-600 italic">" {review.review} "</p>
+                </div>
+              );
+            })}
+        </ul>
         <div className="text-center mt-12">
-          <MainButton as={Link} href={`/tours/reviews/${tourData._id}`}>
+          <MainButton as={Link} href={`/tours/reviews/${tourData.id}`}>
             See All Reviews
           </MainButton>
         </div>
