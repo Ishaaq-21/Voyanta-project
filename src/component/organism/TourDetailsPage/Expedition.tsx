@@ -2,9 +2,9 @@ import { TourSecProps } from "@/Types/Types";
 
 const ExpeditionSec = ({ tourData }: TourSecProps) => {
   return (
-    <section className="relative text-slate-300 py-20 md:py-28">
-      <div className="absolute inset-0 w-full h-full bg-slate-900 -skew-y-5 bg-slate-900 "></div>{" "}
-      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
+    <section className="relative text-slate-300 py-20 md:py-28 -skew-y-5 ">
+      <div className="absolute inset-0 w-full h-full bg-slate-900 bg-slate-900 "></div>{" "}
+      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10 skew-y-5">
         {/* Left Column: Details */}
         <div className="lg:col-span-2">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase mb-6">

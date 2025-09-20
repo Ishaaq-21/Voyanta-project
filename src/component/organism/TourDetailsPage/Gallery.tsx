@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Gallery = ({ tourData }: TourSecProps) => {
   return (
-    <section className="bg-slate-100 py-20 md:py-28">
-      <div className="container mx-auto px-4">
+    <section className="bg-slate-100 py-20 md:py-28 relative  -skew-y-5  ">
+      <div className="container mx-auto px-4 relative skew-y-5">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-700 bg-clip-text   text-transparent tracking-tight uppercase">
             Field Notes & Gallery
