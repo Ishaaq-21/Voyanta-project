@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "name": "The Forest Hiker",
     "duration": 5,
     "maxGroupSize": 25,
@@ -17,7 +17,7 @@
     "stops": 3
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "The Sea Explorer",
     "duration": 7,
     "maxGroupSize": 15,
@@ -34,7 +34,7 @@
     "stops": 4
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "The Snow Adventurer",
     "duration": 4,
     "maxGroupSize": 10,
@@ -51,7 +51,7 @@
     "stops": 2
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "The City Wanderer",
     "duration": 9,
     "maxGroupSize": 20,
@@ -68,7 +68,7 @@
     "stops": 3
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "The Park Camper",
     "duration": 10,
     "maxGroupSize": 15,
@@ -85,7 +85,7 @@
     "stops": 4
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "The Sports Lover",
     "duration": 14,
     "maxGroupSize": 8,
@@ -101,25 +101,9 @@
     "startLocation": "California, USA",
     "stops": 5
   },
+
   {
-    "id": 6,
-    "name": "The Wine Taster",
-    "duration": 5,
-    "maxGroupSize": 8,
-    "difficulty": "easy",
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 35,
-    "price": 1997,
-    "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
-    "description": "Indulge your senses on our 5-day Wine Taster tour through California's famous Napa Valley. You'll visit world-renowned vineyards, enjoy exclusive barrel tastings, and learn about the art of winemaking from expert vintners. With scenic views of rolling hills and lush vineyards, this tour is a delight for both the palate and the eyes. It's the perfect getaway for wine connoisseurs and anyone looking to enjoy a relaxing and luxurious experience.",
-    "imageCover": "tour-7-cover.jpg",
-    "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"],
-    "startDates": ["2021-02-12,10:00", "2021-04-14,10:00", "2021-09-01,10:00"],
-    "startLocation": "California, USA",
-    "stops": 3
-  },
-  {
-    "id": 7,
+    "id": 8,
     "name": "The Star Gazer",
     "duration": 9,
     "maxGroupSize": 8,
@@ -136,7 +120,7 @@
     "stops": 3
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "The Northern Lights",
     "duration": 3,
     "maxGroupSize": 12,
@@ -154,7 +138,7 @@
   },
 
   {
-    "id": 9,
+    "id": 10,
     "name": "The Desert Explorer",
     "duration": 6,
     "maxGroupSize": 12,
@@ -171,7 +155,7 @@
     "stops": 3
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "The Jungle Trekker",
     "duration": 8,
     "maxGroupSize": 18,
@@ -188,7 +172,7 @@
     "stops": 4
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "The Volcano Climber",
     "duration": 5,
     "maxGroupSize": 10,
@@ -205,7 +189,7 @@
     "stops": 2
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "The Safari Adventurer",
     "duration": 7,
     "maxGroupSize": 20,
@@ -222,7 +206,7 @@
     "stops": 5
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "The Island Hopper",
     "duration": 6,
     "maxGroupSize": 14,
@@ -239,7 +223,7 @@
     "stops": 4
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "The Canyon Hiker",
     "duration": 4,
     "maxGroupSize": 15,
@@ -256,7 +240,7 @@
     "stops": 3
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "The River Explorer",
     "duration": 5,
     "maxGroupSize": 12,
@@ -273,7 +257,7 @@
     "stops": 3
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "The Ancient Explorer",
     "duration": 7,
     "maxGroupSize": 18,
@@ -290,7 +274,7 @@
     "stops": 4
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "The Mountain Climber",
     "duration": 10,
     "maxGroupSize": 8,
@@ -307,7 +291,7 @@
     "stops": 3
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "The Arctic Voyager",
     "duration": 12,
     "maxGroupSize": 16,
