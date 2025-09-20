@@ -7,6 +7,15 @@ import Link from "next/link";
 const Reviews = async ({ tourData }: TourSecProps) => {
   const tourReviews: Reviews[] = await getReviewsByTourId(tourData.id);
 
+  const reviewersPromise: Promise<User>[] = tourReviews.map((review) =>
+    getUserById(review.user)
+  );
+
+  const reviewers: User[] = await Promise.all(reviewersPromise);
+
+  const reviewersMap = new Map(
+    reviewers.map((reviewer) => [reviewer._id, reviewer])
+  );
   return (
     <section className="py-12 md:py-24  -skew-y-5">
       <div className="container mx-auto px-4 skew-y-5">
@@ -16,8 +25,8 @@ const Reviews = async ({ tourData }: TourSecProps) => {
         </h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tourReviews.length > 0 ? (
-            tourReviews.map(async (review: Reviews) => {
-              const user: User = await getUserById(review.user);
+            tourReviews.map((review: Reviews) => {
+              const user = reviewersMap.get(review.user);
               return (
                 <div
                   key={review._id}
@@ -25,14 +34,14 @@ const Reviews = async ({ tourData }: TourSecProps) => {
                 >
                   <div className="flex items-center gap-5 mb-8">
                     <Image
-                      src={`/users/${user.photo}`}
-                      alt={`photo of ${user.photo}`}
+                      src={`/users/${user ? user.photo : "unkown"}`}
+                      alt={`photo of ${user ? user.photo : "unkown"}`}
                       width={50}
                       height={50}
                       className="rounded-full"
                     />
                     <p className="font-bold flex align-center text-dark-primary h-fit mb-2">
-                      {user.name}
+                      ${user ? user.name : "unkown"}
                     </p>
                   </div>
                   <p className="text-gray-600 italic">" {review.review} "</p>
