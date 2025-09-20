@@ -14,7 +14,7 @@ const ExpeditionSec = ({ tourData }: TourSecProps) => {
               The Expedition
             </span>
           </h2>
-          <div className="prose prose-xl prose-invert max-w-none text-slate-300 space-y-5">
+          <div className="prose prose-xl prose-invert max-w-[700px] text-slate-300 space-y-5">
             {tourData.description}
           </div>
         </div>
