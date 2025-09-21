@@ -43,8 +43,12 @@ const StarRating: FC<{ rating: number }> = ({ rating }) => {
 
 // --- MAIN PAGE COMPONENT ---
 
-const TourDetailsPage = async ({ params }: { params: { tourId: string } }) => {
-  const { tourId } = params;
+const TourDetailsPage = async ({
+  params,
+}: {
+  params: Promise<{ tourId: string }>;
+}) => {
+  const { tourId } = await params;
 
   const tourData = await getDetailedTourById(tourId);
   if (!tourData) {
