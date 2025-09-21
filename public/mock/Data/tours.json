@@ -145,8 +145,55 @@
       }
     ]
   },
+
   {
     "id": 4,
+    "startLocation": {
+      "description": "NYC, USA",
+      "type": "Point",
+      "coordinates": [40.75894, -73.985141],
+      "address": "Manhattan, NY 10036, USA"
+    },
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 5,
+    "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"],
+    "startDates": [
+      "2021-03-11T10:00:00.000Z",
+      "2021-05-02T09:00:00.000Z",
+      "2021-06-09T09:00:00.000Z"
+    ],
+    "name": "The City Wanderer",
+    "duration": 9,
+    "maxGroupSize": 20,
+    "difficulty": "easy",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
+    "price": 1197,
+    "summary": "Living the life of Wanderlust in the US' most beatiful cities",
+    "description": "Discover the vibrant culture and iconic landmarks of America's greatest cities. This 9-day tour will take you from the bustling streets of New York City to the sunny shores of Los Angeles and the charming hills of San Francisco. You'll have the freedom to explore each city at your own pace, with guided tours of famous attractions included. This is the perfect trip for urban explorers who want to experience the diverse energy of the USA.",
+    "imageCover": "tour-4-cover.jpg",
+    "locations": [
+      {
+        "description": "New York",
+        "type": "Point",
+        "coordinates": [40.781821, -73.967696],
+        "day": 1
+      },
+      {
+        "description": "Los Angeles",
+        "type": "Point",
+        "coordinates": [34.097984, -118.324396],
+        "day": 3
+      },
+      {
+        "description": "San Francisco",
+        "type": "Point",
+        "coordinates": [37.787825, -122.408865],
+        "day": 5
+      }
+    ]
+  },
+  {
+    "id": 5,
     "startLocation": {
       "description": "Las Vegas, USA",
       "type": "Point",
@@ -198,52 +245,6 @@
         "type": "Point",
         "coordinates": [34.011646, -116.107963],
         "day": 9
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "startLocation": {
-      "description": "NYC, USA",
-      "type": "Point",
-      "coordinates": [40.75894, -73.985141],
-      "address": "Manhattan, NY 10036, USA"
-    },
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 5,
-    "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"],
-    "startDates": [
-      "2021-03-11T10:00:00.000Z",
-      "2021-05-02T09:00:00.000Z",
-      "2021-06-09T09:00:00.000Z"
-    ],
-    "name": "The City Wanderer",
-    "duration": 9,
-    "maxGroupSize": 20,
-    "difficulty": "easy",
-    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
-    "price": 1197,
-    "summary": "Living the life of Wanderlust in the US' most beatiful cities",
-    "description": "Discover the vibrant culture and iconic landmarks of America's greatest cities. This 9-day tour will take you from the bustling streets of New York City to the sunny shores of Los Angeles and the charming hills of San Francisco. You'll have the freedom to explore each city at your own pace, with guided tours of famous attractions included. This is the perfect trip for urban explorers who want to experience the diverse energy of the USA.",
-    "imageCover": "tour-4-cover.jpg",
-    "locations": [
-      {
-        "description": "New York",
-        "type": "Point",
-        "coordinates": [40.781821, -73.967696],
-        "day": 1
-      },
-      {
-        "description": "Los Angeles",
-        "type": "Point",
-        "coordinates": [34.097984, -118.324396],
-        "day": 3
-      },
-      {
-        "description": "San Francisco",
-        "type": "Point",
-        "coordinates": [37.787825, -122.408865],
-        "day": 5
       }
     ]
   },
@@ -396,45 +397,99 @@
   {
     "id": 9,
     "startLocation": {
-      "description": "California, USA",
+      "description": "Utah, USA",
       "type": "Point",
-      "coordinates": [38.294065, -122.29286],
-      "address": "560 Jefferson St, Napa, CA 94559, USA"
+      "coordinates": [38.5733, -109.5498],
+      "address": "Moab, UT, USA"
     },
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 7,
-    "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"],
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 28,
+    "images": ["tour-8-1.jpg", "tour-8-2.jpg", "tour-8-3.jpg"],
     "startDates": [
-      "2021-02-12T10:00:00.000Z",
-      "2021-04-14T09:00:00.000Z",
-      "2021-09-01T09:00:00.000Z"
+      "2021-03-23T10:00:00.000Z",
+      "2021-10-25T10:00:00.000Z",
+      "2022-01-30T10:00:00.000Z"
     ],
-    "name": "The Wine Taster",
-    "duration": 5,
+    "name": "The Star Gazer",
+    "duration": 9,
     "maxGroupSize": 8,
-    "difficulty": "easy",
-    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
-    "price": 1997,
-    "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
-    "description": "Indulge your senses on our 5-day Wine Taster tour through California's famous Napa Valley. You'll visit world-renowned vineyards, enjoy exclusive barrel tastings, and learn about the art of winemaking from expert vintners. With scenic views of rolling hills and lush vineyards, this tour is a delight for both the palate and the eyes. It's the perfect getaway for wine connoisseurs and anyone looking to enjoy a relaxing and luxurious experience.",
-    "imageCover": "tour-7-cover.jpg",
+    "difficulty": "medium",
+    "guides": [
+      "5c8a23de2f8fb814b56fa18e",
+      "5c8a22c62f8fb814b56fa18b",
+      "5c8a21f22f8fb814b56fa18a"
+    ],
+    "price": 2997,
+    "summary": "The most remote and stunningly beautiful places for seeing the night sky",
+    "description": "Escape the city lights and witness the awe-inspiring beauty of the night sky on our 9-day Star Gazer tour. We'll take you to some of the most remote and darkest locations in the USA, including Natural Bridges National Monument and Death Valley National Park, renowned for their incredible stargazing opportunities. With expert guides and high-powered telescopes, you'll explore constellations, planets, and distant galaxies. This is a truly magical experience for astronomy enthusiasts and anyone who appreciates the wonders of the universe.",
+    "imageCover": "tour-8-cover.jpg",
     "locations": [
       {
-        "description": "Beringer Vineyards",
+        "description": "Natural Bridges National Monument, Utah",
         "type": "Point",
-        "coordinates": [38.510312, -122.479887],
+        "coordinates": [37.6145, -110.0031],
         "day": 1
       },
       {
-        "description": "Clos Pegase Winery & Tasting Room",
+        "description": "Arches National Park, Utah",
         "type": "Point",
-        "coordinates": [38.585707, -122.582948],
+        "coordinates": [38.6833, 109.5667],
+        "day": 4
+      },
+      {
+        "description": "Death Valley National Park, California",
+        "type": "Point",
+        "coordinates": [36.5054, -117.0794],
+        "day": 7
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "startLocation": {
+      "description": "Phoenix, USA",
+      "type": "Point",
+      "coordinates": [33.4484, -112.074],
+      "address": "100 W Washington St, Phoenix, AZ 85003, USA"
+    },
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 22,
+    "images": ["tour-10-1.jpg", "tour-10-2.jpg", "tour-10-3.jpg"],
+    "startDates": [
+      "2021-05-15T10:00:00.000Z",
+      "2021-09-01T10:00:00.000Z",
+      "2022-03-05T10:00:00.000Z"
+    ],
+    "name": "The Desert Explorer",
+    "duration": 6,
+    "maxGroupSize": 12,
+    "difficulty": "medium",
+    "guides": [
+      "5c8a23de2f8fb814b56fa18e",
+      "5c8a22c62f8fb814b56fa18b",
+      "5c8a21f22f8fb814b56fa18a"
+    ],
+    "price": 897,
+    "summary": "Adventure through the vast deserts of Arizona and Nevada",
+    "description": "Travel through the stunning deserts of Arizona and Nevada. This 6-day tour includes guided hikes in Monument Valley, jeep rides through Antelope Canyon, and sunset viewing at the Grand Canyon. Perfect for explorers who enjoy unique landscapes and vibrant desert sunsets.",
+    "imageCover": "tour-10-cover.jpg",
+    "locations": [
+      {
+        "description": "Monument Valley",
+        "type": "Point",
+        "coordinates": [36.9981, -110.1022],
+        "day": 2
+      },
+      {
+        "description": "Antelope Canyon",
+        "type": "Point",
+        "coordinates": [36.9032, -111.4116],
         "day": 3
       },
       {
-        "description": "Raymond Vineyard and Cellar",
+        "description": "Grand Canyon National Park",
         "type": "Point",
-        "coordinates": [38.482181, -122.434697],
+        "coordinates": [36.0592, -112.1127],
         "day": 5
       }
     ]
