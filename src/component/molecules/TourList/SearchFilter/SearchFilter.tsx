@@ -35,7 +35,7 @@ const ToursSearch = () => {
       params.delete("tourType");
     }
     const debounceId = setTimeout(() => {
-      router.replace(`${pathname}?${params.toString()}`);
+      router.push(`${pathname}?${params.toString()}`);
     }, 300);
 
     return () => clearTimeout(debounceId);
