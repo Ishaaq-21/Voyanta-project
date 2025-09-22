@@ -41,7 +41,7 @@ const Reviews = async ({ tourData }: TourSecProps) => {
                       className="rounded-full"
                     />
                     <p className="font-bold flex align-center text-dark-primary h-fit mb-2">
-                      ${user ? user.name : "unkown"}
+                      {user ? user.name : "unkown"}
                     </p>
                   </div>
                   <p className="text-gray-600 italic">" {review.review} "</p>
