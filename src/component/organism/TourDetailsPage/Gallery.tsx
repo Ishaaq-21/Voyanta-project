@@ -27,7 +27,7 @@ const Gallery = ({ tourData }: TourSecProps) => {
               >
                 <Image
                   src={`/tours/${imgPath}`}
-                  alt={imgPath}
+                  alt={`Image of the ${tourData.name} tour #${index + 1}`}
                   className="object-cover"
                   fill={true}
                 />
