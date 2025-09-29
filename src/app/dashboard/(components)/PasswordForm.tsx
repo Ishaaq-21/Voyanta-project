@@ -1,27 +1,70 @@
 "use client";
-import { ChangePasswordAction, FormState } from "@/_lib/actions";
+import { ChangePasswordAction } from "@/_lib/actions";
 import { useUser } from "@clerk/nextjs";
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
+import { useFormStatus } from "react-dom";
 
-const initialState: FormState = {
-  message: "",
-  errors: {},
+type PasswordFormState = {
+  currPassword: string;
+  newPassword: string;
+  confirmPassword: string;
+};
+
+type formMsg = {
+  message: string;
+  error: boolean;
+};
+const initialState: PasswordFormState = {
+  currPassword: "",
+  newPassword: "",
+  confirmPassword: "",
 };
 export default function ChangePasswordForm() {
   const { user } = useUser();
-  const changePasswordWithUser = ChangePasswordAction.bind(
-    null,
-    user
-  ); /*Argument of type 'UserResource | null | undefined' is not assignable to parameter of type 'FormState'.
-  Type 'undefined' is not assignable to type 'FormState'.ts( */
-  const [state, formAction, isPending] = useActionState(
-    // I need to fix this and make sure everything will work well.
-    changePasswordWithUser,
-    initialState
-  );
+  const { pending } = useFormStatus();
+  const [passwordState, setPasswordState] =
+    useState<PasswordFormState>(initialState);
+  const [message, setMessage] = useState<formMsg | null>(null);
+  const [showMessage, setShowMessage] = useState(false);
+  const handleClick = () => {
+    setShowMessage(true); // show message
+    setTimeout(() => {
+      setShowMessage(false);
+      setPasswordState({
+        currPassword: "",
+        newPassword: "",
+        confirmPassword: "",
+      }); // hide after 3 seconds
+    }, 3000); // 3000ms = 3 seconds
+  };
+  const handleFormSubmission = async (e) => {
+    e.preventDefault();
+    if (passwordState?.confirmPassword !== passwordState?.newPassword) {
+      setMessage({ message: "Passwords don't match", error: true });
+      return;
+    }
 
+    try {
+      await user?.updatePassword({
+        currentPassword: passwordState?.currPassword,
+        newPassword: passwordState?.newPassword as string,
+      });
+      setMessage({ message: "Password updated successfully ✅", error: false });
+    } catch (err: any) {
+      console.log("clerk error : ", err);
+      setMessage({
+        message: " " + (err.message || "Error updating password"),
+        error: true,
+      });
+    }
+  };
   return (
-    <form action={formAction} className="space-y-6">
+    <form onSubmit={handleFormSubmission} className="space-y-6">
+      {showMessage && !message?.error && (
+        <p className="font-bold mb-5 text-green-600 text-sm">
+          {message?.message}
+        </p>
+      )}
       <div>
         <label
           htmlFor="password-current"
@@ -31,17 +74,19 @@ export default function ChangePasswordForm() {
         </label>
         <input
           type="password"
+          value={passwordState?.currPassword}
+          onChange={(e) =>
+            setPasswordState({
+              ...passwordState,
+              currPassword: e.target.value as string,
+            } as PasswordFormState)
+          }
           name="password-current"
           id="password-current"
           placeholder="••••••••"
           required
           className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
         />
-        {state.errors?.currentPassword && (
-          <p className="font-bold text-red-600 text-sm mt-4 ">
-            {state.errors.passwordCurrent}
-          </p>
-        )}
       </div>
       <div>
         <label
@@ -51,6 +96,13 @@ export default function ChangePasswordForm() {
           New password
         </label>
         <input
+          value={passwordState?.newPassword}
+          onChange={(e) =>
+            setPasswordState({
+              ...passwordState,
+              newPassword: e.target.value as string,
+            } as PasswordFormState)
+          }
           type="password"
           name="password"
           id="password"
@@ -58,11 +110,6 @@ export default function ChangePasswordForm() {
           required
           className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
         />
-        {state.errors?.newPassword && (
-          <p className="font-bold text-red-600 text-sm mt-4 ">
-            {state.errors.newPassword}
-          </p>
-        )}
       </div>
       <div>
         <label
@@ -74,27 +121,32 @@ export default function ChangePasswordForm() {
         <input
           type="password"
           name="password-confirm"
+          value={passwordState?.confirmPassword}
+          onChange={(e) =>
+            setPasswordState({
+              ...passwordState,
+              confirmPassword: e.target.value as string,
+            } as PasswordFormState)
+          }
           id="password-confirm"
           placeholder="••••••••"
           required
           className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
         />
-        {state.errors?.confirmNewPassword && (
-          <p className="font-bold text-red-600 text-sm mt-4 ">
-            {state.errors.confirmNewPassword}
-          </p>
-        )}
       </div>
       <div className="text-right">
         <button
+          onClick={handleClick}
           type="submit"
           className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-amber-400 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-transform hover:scale-105 cursor-pointer"
         >
-          {isPending ? "Changing..." : "Change Password"}
+          {pending ? "Changing..." : "Change Password"}
         </button>
       </div>
-      {state.message && state.errors?.length === 0 && (
-        <p className="font-bold text-green-600 text-sm mt-">{state.message}</p>
+      {message?.error && (
+        <p className="font-bold mb-5 text-red-600 text-sm">
+          {message?.message}
+        </p>
       )}
     </form>
   );
