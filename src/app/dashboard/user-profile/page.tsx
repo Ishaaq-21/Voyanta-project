@@ -57,11 +57,12 @@ const CustomUserProfile = async () => {
             <input
               type="email"
               id="email"
+              disabled
               defaultValue={
                 (userObj?.emailAddresses?.[0]?.emailAddress as string) || ""
               }
               required
-              className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
+              className="mt-1 block  text-gray-500 w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
             />
           </div>
 
