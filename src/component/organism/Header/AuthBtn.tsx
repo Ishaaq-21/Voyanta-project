@@ -5,7 +5,7 @@ import { JSX } from "react";
 //pirmary-btn (-small) are custom classes defined in the global.css @layer component
 const LoginBtn = ({ small }: { small: boolean }): JSX.Element => {
   return (
-    <MainButton as={Link} href={"/sing-in"} small={small}>
+    <MainButton as={Link} href={"/sign-in"} small={small}>
       Login
     </MainButton>
   );
