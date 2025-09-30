@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import ScrollToTop from "@/component/atoms/ScrollToTop";
 import Header from "@/component/organism/Header/Header";
 import Footer from "@/component/organism/Footer";
 import "../styles/globals.css";
@@ -25,7 +24,6 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Header />
-          <ScrollToTop />
           {children}
           <Footer />
         </body>
