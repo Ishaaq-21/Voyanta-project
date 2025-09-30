@@ -34,8 +34,8 @@ export default function ChangePasswordForm() {
         currPassword: "",
         newPassword: "",
         confirmPassword: "",
-      }); // hide after 3 seconds
-    }, 3000); // 3000ms = 3 seconds
+      });
+    }, 3000);
   };
   const handleFormSubmission = async (e) => {
     e.preventDefault();
