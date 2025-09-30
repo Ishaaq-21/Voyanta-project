@@ -18,6 +18,12 @@ const Header = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Link>
+        <Link
+          href={"/dashboard/user-profile"}
+          className="text-black font-semibold text-lg"
+        >
+          Dashboard
+        </Link>
         <div className="register">
           <SignedOut>
             <NavBar />
