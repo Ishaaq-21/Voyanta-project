@@ -10,7 +10,7 @@ type PasswordFormState = {
   confirmPassword: string;
 };
 
-type formMsg = {
+export type formMsg = {
   message: string;
   error: boolean;
 };
