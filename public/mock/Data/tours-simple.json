@@ -152,22 +152,5 @@
     "startDates": ["2021-05-15,10:00", "2021-09-01,10:00", "2022-03-05,10:00"],
     "startLocation": "Phoenix, USA",
     "stops": 3
-  },
-  {
-    "id": 11,
-    "name": "The Jungle Trekker",
-    "duration": 8,
-    "maxGroupSize": 18,
-    "difficulty": "difficult",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 40,
-    "price": 1297,
-    "summary": "Trek through lush rainforests and discover exotic wildlife",
-    "description": "An 8-day adventure through Costa Rica’s lush rainforests. Activities include waterfall hikes, wildlife spotting, and canopy zip-lining. Encounter monkeys, toucans, and exotic plants in this unforgettable tropical experience.",
-    "imageCover": "tour-2-cover.jpg",
-    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
-    "startDates": ["2021-07-11,10:00", "2021-11-20,10:00", "2022-02-05,10:00"],
-    "startLocation": "San José, CR",
-    "stops": 4
   }
 ]
