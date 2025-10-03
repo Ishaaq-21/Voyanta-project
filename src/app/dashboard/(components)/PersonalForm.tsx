@@ -1,9 +1,47 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { formMsg } from "./PasswordForm";
+import { UserRound } from "lucide-react";
 
 const PersonalForm = () => {
   const userObj = useUser().user;
+  const [firstNameState, setFirstNameState] = useState("");
+  const [lastNameState, setLastNameState] = useState("");
+  const [isLoading, setIsloading] = useState(false);
+  const [message, setMessage] = useState<formMsg>({
+    message: "",
+    error: false,
+  });
+  const showSuccessMsg = () => {
+    setMessage({ message: "✅ Name updated successfully!", error: false });
+    setTimeout(() => {
+      setMessage({ message: "", error: false });
+    }, 3000);
+  };
+  useEffect(() => {
+    if (userObj) {
+      setFirstNameState(userObj.firstName || "");
+      setLastNameState(userObj.lastName || "");
+    }
+  }, [userObj]);
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsloading(true);
+    try {
+      await userObj?.update({
+        firstName: firstNameState.trim(),
+        lastName: lastNameState.trim(),
+      });
+      showSuccessMsg();
+    } catch (error) {
+      console.log(error);
+      setMessage({ message: "❌ Failed to update name.", error: true });
+    } finally {
+      setIsloading(false);
+    }
+  };
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
       {message && (
