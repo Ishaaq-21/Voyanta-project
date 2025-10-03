@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { Children, JSX } from "react";
+import React, { JSX } from "react";
 
 type MainButtonBaseProps = {
   children: React.ReactNode;
