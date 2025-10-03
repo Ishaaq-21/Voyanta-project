@@ -50,13 +50,17 @@ const PersonalForm = () => {
         </p>
       )}
       <div className="flex items-center space-x-4">
-        <div className="w-16 h-16 rounded-full relative overflow-hidden bg-gray-200">
-          <Image
-            src={userObj?.imageUrl || ""}
-            alt="User photo"
-            className="object-cover "
-            fill={true}
-          />
+        <div className="w-16 h-16 rounded-full relative overflow-hidden bg-gray-200 flex-center">
+          {userObj?.imageUrl.length ? (
+            <Image
+              src={userObj?.imageUrl}
+              alt="User photo"
+              className="object-cover "
+              fill={true}
+            />
+          ) : (
+            <UserRound />
+          )}
         </div>
         <button
           type="button"
