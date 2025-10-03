@@ -1,8 +1,6 @@
 import { getReviewsByTourId, getUserById } from "@/_lib/apiClient";
-import MainButton from "@/component/atoms/MainButton";
 import type { Reviews, TourSecProps, User } from "@/Types/Types";
 import Image from "next/image";
-import Link from "next/link";
 
 const Reviews = async ({ tourData }: TourSecProps) => {
   const tourReviews: Reviews[] = await getReviewsByTourId(tourData.id);
@@ -54,11 +52,6 @@ const Reviews = async ({ tourData }: TourSecProps) => {
             </p>
           )}
         </ul>
-        <div className="text-center mt-12">
-          <MainButton as={Link} href={`/tours/reviews/${tourData.id}`}>
-            See All Reviews
-          </MainButton>
-        </div>
       </div>
     </section>
   );
