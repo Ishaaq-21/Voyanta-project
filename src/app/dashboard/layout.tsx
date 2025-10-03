@@ -17,8 +17,6 @@ export default function App({ children }: { children: React.ReactNode }) {
                 label="User Profile"
                 href="user-profile"
               />
-              <NavItem icon="briefcase" label="My bookings" href="bookings" />
-              <NavItem icon="star" label="My reviews" href="reviews" />
             </ul>
           </nav>
 
