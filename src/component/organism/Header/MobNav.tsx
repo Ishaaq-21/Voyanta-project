@@ -33,7 +33,7 @@ const LoginOverLay = ({
 }) => (
   <div
     onClick={handleClose}
-    className="fixed w-full h-full inset-0 bg-black/70 z-40 flex-col gap-y-3 flex-center"
+    className="fixed w-full h-full inset-0 bg-black/90 z-40 flex-col gap-y-3 flex-center"
     aria-label="Overlay"
     aria-labelledby="overlay-title"
     aria-modal="true"
