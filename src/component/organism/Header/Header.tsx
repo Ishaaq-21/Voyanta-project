@@ -6,6 +6,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import MobileNav from "./MobNav";
 import NavBar from "./Nav";
 import MainButton from "@/component/atoms/MainButton";
+import CustomSignOut from "@/component/atoms/CustomSignOut";
 const Header = () => {
   return (
     <header className="h-20 bg-gray-500 relative z-50">
@@ -29,6 +30,7 @@ const Header = () => {
             <MainButton as={Link} href={"/dashboard/user-profile"} small={true}>
               Profile
             </MainButton>
+            <CustomSignOut />
           </SignedIn>
         </div>
       </Container>
