@@ -43,13 +43,19 @@ const ToursSearch = () => {
     } else {
       params.delete("tourType");
     }
+    // Build new URL
+    const newUrl = `${pathname}?${params.toString()}`;
+    const currentUrl = `${pathname}?${searchParams.toString()}`;
+
+    // Prevent redundant router.push when URLs are identical
+    if (newUrl === currentUrl) return;
+
     const debounceId = setTimeout(() => {
       router.push(`${pathname}?${params.toString()}`);
     }, 300);
 
     return () => clearTimeout(debounceId);
   }, [pathname, router, searchTerm, tourType]);
-
   return (
     <div className="flex justify-center items-center mb-16 font-sans px-4">
       <div className="flex flex-col md:flex-row items-center w-full max-w-3xl bg-white rounded-2xl md:rounded-full shadow-lg p-4 md:p-2 transition-all duration-300 focus-within:shadow-xl gap-3 md:gap-0">
