@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // Using lucide-react for icons, which fits the clean aesthetic.
 // You can install it with: npm install lucide-react
@@ -21,14 +21,23 @@ const ToursSearch = () => {
     (searchParams.get("tourType") as TourType) || "all"
   );
 
+  const prevParamsStr = useRef<string | null>(null);
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
+
+    const prevParams = prevParamsStr.current;
+    const currParams = JSON.stringify({ searchTerm, tourType });
+
+    if (prevParams === currParams) {
+      params.set("page", "1");
+      prevParamsStr.current = currParams;
+    }
+
     if (searchTerm) {
       params.set("searchTerm", searchTerm);
     } else {
       params.delete("searchTerm");
     }
-    params.set("page", "1");
     if (tourType) {
       params.set("tourType", tourType);
     } else {
