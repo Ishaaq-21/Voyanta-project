@@ -7,7 +7,6 @@ import TourHero from "@/component/organism/TourDetailsPage/Hero";
 import ExpeditionSec from "@/component/organism/TourDetailsPage/Expedition";
 import Gallery from "@/component/organism/TourDetailsPage/Gallery";
 import Reviews from "@/component/organism/TourDetailsPage/Reviews";
-import CTA from "@/component/organism/TourDetailsPage/CTA";
 import { getDetailedTourById } from "@/_lib/apiClient";
 import { notFound } from "next/navigation";
 import MapWrapper from "@/component/organism/TourDetailsPage/MapWrapper";
@@ -67,9 +66,6 @@ const TourDetailsPage = async ({
 
       {/* 5. Reviews Section */}
       <Reviews tourData={tourData} />
-
-      {/* 6. CTA Section */}
-      <CTA tourData={tourData} />
     </div>
   );
 };
