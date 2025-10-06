@@ -42,7 +42,9 @@ const Reviews = async ({ tourData }: TourSecProps) => {
                       {user ? user.name : "unkown"}
                     </p>
                   </div>
-                  <p className="text-gray-600 italic">" {review.review} "</p>
+                  <p className="text-gray-600 italic">
+                    &ldquo;{review.review}&rdquo;
+                  </p>
                 </div>
               );
             })
