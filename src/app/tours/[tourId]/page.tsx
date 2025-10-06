@@ -8,36 +8,20 @@ import { getDetailedTourById } from "@/_lib/apiClient";
 import { notFound } from "next/navigation";
 import MapWrapper from "@/component/organism/TourDetailsPage/MapWrapper";
 
-// --- REUSABLE SUB-COMPONENTS ---
-
-// A small utility for rendering star ratings
-const StarRating: FC<{ rating: number }> = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const halfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-  return (
-    <div className="flex items-center text-amber-500">
-      {[...Array(fullStars)].map((_, i) => (
-        <Star key={`full-${i}`} className="w-4 h-4 fill-current" />
-      ))}
-      {halfStar && (
-        <Star
-          key="half"
-          className="w-4 h-4 fill-current"
-          style={{ clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }}
-        />
-      )}
-      {[...Array(emptyStars)].map((_, i) => (
-        <Star
-          key={`empty-${i}`}
-          className="w-4 h-4 text-gray-300 fill-current"
-        />
-      ))}
-    </div>
-  );
-};
-
-// --- MAIN PAGE COMPONENT ---
+export function generateStaticParams() {
+  return [
+    { tourId: "1" },
+    { tourId: "2" },
+    { tourId: "3" },
+    { tourId: "4" },
+    { tourId: "5" },
+    { tourId: "6" },
+    { tourId: "7" },
+    { tourId: "8" },
+    { tourId: "9" },
+    { tourId: "10" },
+  ];
+}
 
 const TourDetailsPage = async ({
   params,
