@@ -1,7 +1,7 @@
 import { JSX } from "react";
 
 type IconProps = {
-  name: string;
+  name: keyof typeof icons;
   className: string;
 };
 
