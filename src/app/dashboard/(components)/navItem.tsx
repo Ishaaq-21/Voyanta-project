@@ -1,9 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "./Icons";
+import Icon, { icons } from "./Icons";
 
-const NavItem = ({ icon, label, href = "" }) => {
+type NavItemProps = {
+  icon: keyof typeof icons;
+  label: string;
+  href?: string;
+};
+const NavItem = ({ icon, label, href = "" }: NavItemProps) => {
   const currPathName = usePathname();
 
   return (
