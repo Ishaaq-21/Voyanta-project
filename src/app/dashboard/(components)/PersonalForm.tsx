@@ -26,7 +26,7 @@ const PersonalForm = () => {
       setLastNameState(userObj.lastName || "");
     }
   }, [userObj]);
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsloading(true);
     try {

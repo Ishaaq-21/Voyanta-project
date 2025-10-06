@@ -36,7 +36,7 @@ export default function ChangePasswordForm() {
       });
     }, 3000);
   };
-  const handleFormSubmission = async (e) => {
+  const handleFormSubmission = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (passwordState?.confirmPassword !== passwordState?.newPassword) {
       setMessage({ message: "Passwords don't match", error: true });
