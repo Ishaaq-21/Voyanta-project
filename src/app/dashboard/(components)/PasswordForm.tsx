@@ -49,10 +49,14 @@ export default function ChangePasswordForm() {
         newPassword: passwordState?.newPassword as string,
       });
       setMessage({ message: "Password updated successfully ✅", error: false });
-    } catch (err: any) {
-      console.log("clerk error : ", err);
+    } catch (err) {
+      let errorMessage = "Error updating password";
+
+      if (err instanceof Error) {
+        errorMessage = err.message;
+      }
       setMessage({
-        message: " " + (err.message || "Error updating password"),
+        message: " " + (errorMessage || "Error updating password"),
         error: true,
       });
     }
