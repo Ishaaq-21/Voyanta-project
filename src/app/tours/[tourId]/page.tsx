@@ -1,8 +1,5 @@
 // src/app/tours/[id]/page.tsx
 // This component is designed for a dynamic route like /tours/the-forest-hiker
-
-import type { FC } from "react";
-import { Star } from "lucide-react";
 import TourHero from "@/component/organism/TourDetailsPage/Hero";
 import ExpeditionSec from "@/component/organism/TourDetailsPage/Expedition";
 import Gallery from "@/component/organism/TourDetailsPage/Gallery";

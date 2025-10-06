@@ -1,4 +1,3 @@
-import { icons } from "lucide-react";
 import { JSX } from "react";
 
 type IconProps = {

@@ -1,7 +1,6 @@
 "use client";
-import { ChangePasswordAction } from "@/_lib/actions";
 import { useUser } from "@clerk/nextjs";
-import { useActionState, useState } from "react";
+import { useState } from "react";
 import { useFormStatus } from "react-dom";
 
 type PasswordFormState = {
